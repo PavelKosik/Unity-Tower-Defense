@@ -33,6 +33,8 @@ public class PlaceWall : MonoBehaviour
            
         }
 
+        //once player clicks the left mouse button the wall checks if it can be placed on the position player tried to spawn it on
+        //the wall can only be spawned on the enemy paths
         if(Input.GetMouseButtonDown(0))
         {
             if (placed==false)
@@ -41,9 +43,7 @@ public class PlaceWall : MonoBehaviour
                 Vector3 positionToBePlacedAt = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
                 Ray ray = new Ray(positionToBePlacedAt, transform.forward);
                 RaycastHit2D[] hit;
-                hit = Physics2D.RaycastAll(ray.origin,ray.direction,1000,placebleLayer);      
-
-                Debug.DrawRay(ray.origin, ray.direction*100,Color.red);
+                hit = Physics2D.RaycastAll(ray.origin,ray.direction,1000,placebleLayer);
 
                 if (Physics2D.Raycast(ray.origin,ray.direction)) {
 

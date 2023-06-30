@@ -26,6 +26,7 @@ public class TurretOnClickScript : MonoBehaviour, IPointerDownHandler
     // Update is called once per frame
     void Update()
     {
+        //actives the stats panel and draws the range line
         if (turretsStatsPanelManagerScript.currentActiveStatsPanel==statsPanel&&statsPanel.activeInHierarchy==false)
         {
             statsPanel.SetActive(true);
@@ -33,6 +34,7 @@ public class TurretOnClickScript : MonoBehaviour, IPointerDownHandler
            
         }
 
+        //deactives the stats panel and deletes the range line
         else if (turretsStatsPanelManagerScript.currentActiveStatsPanel!=statsPanel&&statsPanel.activeInHierarchy)
         {
             statsPanel.SetActive(false);
@@ -43,6 +45,8 @@ public class TurretOnClickScript : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
+        //sets to show the stats panel by changing the currentActiveStatsPanel to itself or to null
+        //based on if the panel was already open or not
         if (turretsStatsPanelManagerScript.currentActiveStatsPanel!=statsPanel) {
 
             turretsStatsPanelManagerScript.currentActiveStatsPanel = statsPanel;
@@ -57,6 +61,7 @@ public class TurretOnClickScript : MonoBehaviour, IPointerDownHandler
 
     void CreatePoints()
     {
+        //creates a circle around the turret which shows the turret's attack range
         float x;
         float y;
 

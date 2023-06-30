@@ -23,6 +23,7 @@ public class MineIconScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if mine is build the mineUpdatePanel can be opened
         if (mineScript.build) {
 
             if (clickAnimationHandlerUIScript.hover && mineUpdatePanel.activeInHierarchy == false)
@@ -65,6 +66,7 @@ public class MineIconScript : MonoBehaviour
 
     void BuildMine()
     {
+        //builds the mine
         mineScript.build = true;
         anim.SetBool("Build", true);
         goldManagerScript.numberOfGold -= mineScript.buildCost;

@@ -7,11 +7,8 @@ using UnityEngine.UI;
 public class ClickAnimationHandlerUIScript : MonoBehaviour,IPointerDownHandler,IPointerUpHandler,IPointerEnterHandler,IPointerExitHandler
 {
     private Animator anim;
-    //public float animLength; unused var
     public MonoBehaviour script;
     public bool hover;
-    //public StatsCloseButtonScript statsCloseButtonScript; unused var
-
     // Start is called before the first frame update
     void Start()
     {

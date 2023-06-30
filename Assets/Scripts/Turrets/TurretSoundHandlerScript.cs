@@ -17,7 +17,7 @@ public class TurretSoundHandlerScript : MonoBehaviour
     {
         
     }
-
+    //plays the projectile sound when turret attacks
     public void PlayProjectileSound()
     {
         projectileSound.Play();

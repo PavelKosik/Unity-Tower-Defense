@@ -21,6 +21,7 @@ public class ResumeButtonScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //closes the pause menu
         pauseMenu.SetActive(false);
         pauseMenuManagerScript.open = false;
         yield return new WaitForEndOfFrame();

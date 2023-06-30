@@ -64,12 +64,4 @@ public class BlockedPositionWallScript : MonoBehaviour
             }
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        for (int i=0;i<blockedPosition.Count;i++)
-        {
-            Gizmos.DrawCube(blockedPosition[i], Vector3.one);
-        }
-    }
 }

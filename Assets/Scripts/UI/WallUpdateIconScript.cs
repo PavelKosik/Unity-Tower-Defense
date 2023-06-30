@@ -20,9 +20,10 @@ public class WallUpdateIconScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //updates the walls stats based on it's type
         switch (updateValue)
         {
-            //TODO CHECK IF ENOUGH CRYSTALS
+
             case "health":
                 wallUpdateStatsManager.UpdateHealth();             
                 break;

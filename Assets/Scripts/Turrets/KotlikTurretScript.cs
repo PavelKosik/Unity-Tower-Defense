@@ -20,13 +20,9 @@ public class KotlikTurretScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-
         if (called&& skinnedMeshRenderer.GetBlendShapeWeight(0)<=100) {
             skinnedMeshRenderer.SetBlendShapeWeight(0, skinnedMeshRenderer.GetBlendShapeWeight(0)+speed*Time.deltaTime);
-        }
-
-       
+        }       
     }
 
     public void Call()

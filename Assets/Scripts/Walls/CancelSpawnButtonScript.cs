@@ -30,10 +30,6 @@ public class CancelSpawnButtonScript : MonoBehaviour
         // because it shouldn't be there after user cancels the spawning
         spawnButtonScript.spawnedGameObject.SetActive(false);
         
-        // this line was there to make sure the CancelSpawn doesn't disable already spawned turret but
-        // it's not necessery anymore
-        //spawnButtonScript.spawnedGameObject = null; 
-
         // set spawning to false so player can spawn another wall in SpawnButtonScript
         spawnButtonScript.spawning = false;
 

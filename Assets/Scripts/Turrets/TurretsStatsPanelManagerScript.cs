@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//makes sure that only one turrets stats panel is active
 public class TurretsStatsPanelManagerScript : MonoBehaviour
 {
     [HideInInspector]

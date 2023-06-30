@@ -16,6 +16,7 @@ public class RotationKeeperScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //properly rotates the turrets
         turretPlacerScript.buildIcon.transform.rotation = Quaternion.Euler(turretPlacerScript.buildIcon.transform.rotation.x, turretPlacerScript.buildIcon.transform.rotation.y, transform.rotation.z);
         
         for(int i=0; i<turretPlacerScript.turrets.Length;i++)

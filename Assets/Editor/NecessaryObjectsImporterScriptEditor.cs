@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//spawns all the neccesary managers in the level
 [CustomEditor(typeof(NecessaryObjectsImporterScript))]
 public class NecessaryObjectsImporterScriptEditor : Editor
 {

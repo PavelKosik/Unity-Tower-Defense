@@ -27,11 +27,6 @@ public class TurretSpawnScript : MonoBehaviour
         
     }
 
-   /* private void OnMouseDown()
-    {
-        SpawnTurret();
-    }*/
-
     public IEnumerator OnInvoke()
     {
         SpawnTurret();
@@ -40,8 +35,10 @@ public class TurretSpawnScript : MonoBehaviour
 
     void SpawnTurret()
     {
+        //turret can only be purchased if player has enough gold
         if (goldManagerScript.numberOfGold>=cost) {
 
+            //spawns the turret
             goldManagerScript.numberOfGold -= cost;
             GameObject inst = Instantiate(turretGameObject);
             inst.transform.position = transform.parent.transform.position;            

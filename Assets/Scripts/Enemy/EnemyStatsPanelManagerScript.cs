@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//makes sure only 1 enemy stats panel is active at the time
 public class EnemyStatsPanelManagerScript : MonoBehaviour
 {
     [HideInInspector]

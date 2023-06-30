@@ -23,10 +23,8 @@ public class TurretProjectileScript : MonoBehaviour
 
         if (turretTag == "ArrowTurret")
         {
-
             Quaternion rotation = Quaternion.LookRotation(ray.direction, transform.forward);
             transform.rotation = rotation;
-
         }
 
         rb.velocity = ray.direction * Time.deltaTime * 5000;

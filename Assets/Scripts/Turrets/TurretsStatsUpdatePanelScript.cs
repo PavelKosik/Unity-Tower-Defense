@@ -18,6 +18,7 @@ public class TurretsStatsUpdatePanelScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //sets the default stats
         turrets = GetComponentInParent<Turrets>();
         attackTextMesh.text = turrets.damage.ToString();
         attackSpeedTextMesh.text = (1 / turrets.timeBetweenAttacks).ToString();
@@ -39,6 +40,7 @@ public class TurretsStatsUpdatePanelScript : MonoBehaviour
 
     public void UpdateStats()
     {
+        //updates the text to properly reflect the current state of updates
         attackTextMesh.text = turrets.damage.ToString();
         attackSpeedTextMesh.text = (Mathf.Round((1 / turrets.timeBetweenAttacks)*100)/100).ToString(); //rounds the number to 2 decimals        
         rangeTextMesh.text = turrets.range.ToString();

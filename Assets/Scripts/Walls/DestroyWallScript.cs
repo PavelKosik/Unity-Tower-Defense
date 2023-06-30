@@ -23,6 +23,7 @@ public class DestroyWallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //calculates the price to refund player based on the damage the wall has received
         damageTaken = wallScript.currentHealth / wallScript.maxHealth * 100;
         destroyReturnPrice = Mathf.RoundToInt(walls.cost * damageTaken / 100);
         destroyReturnPriceTextMesh.text = ("Return:" + destroyReturnPrice).ToString();
@@ -30,6 +31,7 @@ public class DestroyWallScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //refunds player the gold and destroys the wall
         goldManagerScript.numberOfGold += destroyReturnPrice;
         wallScript.alive = false;
         wallScript.gameObject.SetActive(false);

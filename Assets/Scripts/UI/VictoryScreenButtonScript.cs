@@ -27,7 +27,7 @@ public class VictoryScreenButtonScript : MonoBehaviour, IPointerDownHandler, IPo
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
-
+        //makes the button play clicked animation
         anim.SetBool("Clicked", true);
       
     }
@@ -36,7 +36,7 @@ public class VictoryScreenButtonScript : MonoBehaviour, IPointerDownHandler, IPo
     {
         anim.SetBool("Clicked", false);
         
-
+        //chooses the proper action to do based on the button type
         if (buttonType == "Retry")
         {
             SceneManager.LoadSceneAsync(sceneToLoad.buildIndex);

@@ -19,6 +19,7 @@ public class WallOnClickScript : MonoBehaviour, IPointerDownHandler
     // Update is called once per frame
     void Update()
     {
+        //closes the wall stats if player chose to open different wall's stats
         if (wallStatsManager.currentActiveWallStatsPanel != gameObject && wallStats.activeInHierarchy)
         {
             wallStats.SetActive(false);
@@ -27,18 +28,16 @@ public class WallOnClickScript : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
+        //handles opening / closing the stats on click
         if (placeWall.placed) {
             if (wallStatsManager.currentActiveWallStatsPanel == gameObject)
             {
-
-                //enemyStats.SetActive(true);
                 wallStats.SetActive(false);
                 wallStatsManager.currentActiveWallStatsPanel = null;
             }
 
             else
             {
-                //enemyStats.SetActive(false);
                 wallStatsManager.currentActiveWallStatsPanel = gameObject;
                 wallStats.SetActive(true);
             }

@@ -32,13 +32,11 @@ public class Enemies : MonoBehaviour
 
     public IEnumerator Die()
     {
-        /*enemySoundHandlerScript.PlayDyingSound();
-        yield return new WaitForSeconds(0.2f);*/
+        //handles enemy death
         enemySoundHandlerScript.PlayGoldSound();
         healthImage.transform.parent.gameObject.SetActive(false);
         GetComponent<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(0.3f);               
-        //yield return new WaitForSeconds(timeOfAnimation);       
+        yield return new WaitForSeconds(0.3f);                     
         goldText.transform.parent.gameObject.SetActive(true);        
         yield return new WaitForSeconds(1);
         goldText.transform.parent.gameObject.SetActive(false);

@@ -18,6 +18,7 @@ public class QuitButtonScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //closes the game
         Application.Quit();
         yield return new WaitForEndOfFrame();
     }

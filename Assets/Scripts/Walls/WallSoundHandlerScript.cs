@@ -9,6 +9,7 @@ public class WallSoundHandlerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets all the audio clips set to play when wall is damaged
         takenDamageSound = new AudioSource[takenDamageSoundClips.Length];
         for (int i=0; i<takenDamageSoundClips.Length;i++)
         {
@@ -34,7 +35,7 @@ public class WallSoundHandlerScript : MonoBehaviour
             }
         }
 
-
+        //chooses one of the audio clips to play
         int index = Random.Range(0, takenDamageSound.Length);
         takenDamageSound[index].Play();
         

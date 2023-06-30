@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//Component used to spawn all the necessary managers in to a level
 [ExecuteInEditMode]
 public class NecessaryObjectsImporterScript : MonoBehaviour
 {

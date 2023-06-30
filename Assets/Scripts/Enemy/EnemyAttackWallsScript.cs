@@ -36,7 +36,7 @@ public class EnemyAttackWallsScript : MonoBehaviour
             Ray ray = new Ray(transform.position, wallToAttack.transform.position - transform.position);
             Quaternion lookRotation = Quaternion.LookRotation(transform.forward, ray.direction);
             transform.rotation = lookRotation;
-
+            //walls take damage after a certain interval
             if (currentAttackTime >= timeToAttack)
             {
                 wallScript.currentHealth -= damage;
@@ -48,13 +48,15 @@ public class EnemyAttackWallsScript : MonoBehaviour
                 currentAttackTime += Time.deltaTime;
             }
 
+            //checks the number of surronding enemies
+            //this makes sure that enemies leave the wall in queue based on who arrived first and not all of them at the same time
             if (arrived == 0)
             {
                 wallScript.numberOfSurroundingEnemies++;
                 arrived = wallScript.numberOfSurroundingEnemies;
             }
         }
-
+        //once the wall has been destroyed the enemy continues to walk towards the base
         else
         {
             pathFollower.attacking = false;

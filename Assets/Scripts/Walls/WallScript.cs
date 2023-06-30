@@ -19,6 +19,7 @@ public class WallScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //set all the values necessary for the proper function of the wall
         walls = GetComponent<Walls>();
         currentHealth = walls.health;
         alive = true;
@@ -32,6 +33,7 @@ public class WallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if wall's health reaches 0 the wall gets destroyed
         if (currentHealth<=0)
         {
             alive = false;
@@ -48,6 +50,7 @@ public class WallScript : MonoBehaviour
 
         }
 
+        //scales the wall health bar to reflect the state of the wall
         if (walls.wallHealthImage.activeInHierarchy)
         {
             walls.wallHealthImage.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
@@ -55,12 +58,7 @@ public class WallScript : MonoBehaviour
 
         if (placed)
         {
-            /*if(currentHealth!=lastSoundHealth&&currentHealth%soundDamage==0)
-            {
-                lastSoundHealth = currentHealth;
-                wallSoundHandlerScript.PlayTakenDamageSound();
-            }*/
-
+            //makes sure the sound is played only after certain thresholds to make sure the sound doesn't get repeated each second
             if (currentHealth!=lastSoundHealth)
             {
                 lastSoundHealth = currentHealth;

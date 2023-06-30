@@ -9,7 +9,6 @@ public class DefeatScreenButtonScript : MonoBehaviour, IPointerDownHandler, IPoi
 {
     public bool hover;
     private Animator anim;
-    //public bool clicked; unused var
     public string buttonType;
     public Scene sceneToLoad;
     // Start is called before the first frame update
@@ -36,7 +35,7 @@ public class DefeatScreenButtonScript : MonoBehaviour, IPointerDownHandler, IPoi
     {
         anim.SetBool("Clicked", false);
 
-
+        //handles the button functions based on the button type
         if (buttonType == "Retry")
         {
             SceneManager.LoadSceneAsync(sceneToLoad.buildIndex);

@@ -25,18 +25,14 @@ public class EnemyOnClickScript : MonoBehaviour,IPointerDownHandler
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
-       // open = !open;
-
+        //activates / deactives the stats panel based on if it was active or not
         if (enemyStatsPanelManager.activeEnemyStatsPanel==gameObject) {
-
-            //enemyStats.SetActive(true);
             enemyStats.SetActive(false);
             enemyStatsPanelManager.activeEnemyStatsPanel = null;
         }
 
         else
         {
-            //enemyStats.SetActive(false);
             enemyStatsPanelManager.activeEnemyStatsPanel = gameObject;
             enemyStats.SetActive(true);
         }

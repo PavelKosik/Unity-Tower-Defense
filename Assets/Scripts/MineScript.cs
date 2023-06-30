@@ -26,8 +26,10 @@ public class MineScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //updates the text to reflect the current crystal amount
         crystalAmountText.text = (miningCrystalAmount+updateMiningCrystalAmountIncrease).ToString();
 
+        //if the mine is built it mines the crystals and updates the crystalManager's values
         if (build)
         {
             costText.text = updateCost.ToString();

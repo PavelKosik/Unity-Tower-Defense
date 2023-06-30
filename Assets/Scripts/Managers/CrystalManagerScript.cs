@@ -16,6 +16,7 @@ public class CrystalManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //updates the text to reflect the current amount of crystals that player has
         numberOfCrystalsText.text = numberOfCrystals.ToString();
     }
 }

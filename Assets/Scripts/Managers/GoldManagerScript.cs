@@ -28,6 +28,7 @@ public class GoldManagerScript : MonoBehaviour
     {
         numberOfGoldText.text = numberOfGold.ToString();
 
+        //makes sure that the text mesh doesn't stay on screen forever
         if (activeTime>0)
         {
             activeTime -= Time.deltaTime;
@@ -41,7 +42,7 @@ public class GoldManagerScript : MonoBehaviour
 
     public void HandleNotEnoughGold()
     {
-        
+        //shows player text mesh that says he has not enough gold for a set period of time
         notEnoughGoldTextMesh.gameObject.SetActive(true);
         notEnoughGoldAudio.Play();
         activeTime = 1.5f;

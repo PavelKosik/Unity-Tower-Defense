@@ -27,7 +27,7 @@ public class SettingsImageScript : MonoBehaviour //,IPointerUpHandler
    
     public IEnumerator OnInvoke()
     {
-       
+       //opens or closes the pauseMenu based on the previous state of it
         pauseMenuManagerScript.open = !pauseMenuManagerScript.open;
 
         if (pauseMenuManagerScript.open)

@@ -21,6 +21,7 @@ public class TurretStatsPanelScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //setups the default turret stats
         turretStatsPanel.SetActive(false);
         clickAnimationHandlerUIScript = GetComponent<ClickAnimationHandlerUIScript>();
 
@@ -36,7 +37,7 @@ public class TurretStatsPanelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //opens the turret stats if the turret build icon is hovered
         if (clickAnimationHandlerUIScript.hover)
         {
             turretStatsPanel.SetActive(true);

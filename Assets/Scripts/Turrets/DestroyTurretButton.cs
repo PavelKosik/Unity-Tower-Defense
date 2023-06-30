@@ -24,18 +24,14 @@ public class DestroyTurretButton : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
-        /*GameObject inst = Instantiate(turrets.placer);
-        inst.transform.position = turrets.placer.transform.position;
-        inst.gameObject.SetActive(true);
-        inst.GetComponent<TurretPlacerScript>().buildIcon.SetActive(true);
-        goldManagerScript.numberOfGold += turrets.cost;
-        turrets.gameObject.SetActive(false);*/
+      
         anim.SetBool("Clicked", true);
         anim.SetInteger("Index", 4);
     }
 
     private void OnMouseUpAsButton()
     {
+        //refunds the gold to player and destroys the turret
         GameObject inst = Instantiate(turrets.placer);
         inst.transform.position = turrets.placer.transform.position;
         inst.gameObject.SetActive(true);

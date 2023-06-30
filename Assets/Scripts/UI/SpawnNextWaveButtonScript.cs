@@ -8,6 +8,7 @@ public class SpawnNextWaveButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets all the places enemies can spawn at in the given level
         GameObject[] enemySpawnersGameObject = GameObject.FindGameObjectsWithTag("Path");
         enemySpawners = new EnemiesSpawnerComponent[enemySpawnersGameObject.Length];
      
@@ -25,6 +26,7 @@ public class SpawnNextWaveButtonScript : MonoBehaviour
 
     public void OnClick()
     {
+        //spawns the waves
         for (int i = 0; i < enemySpawners.Length; i++)
         {
             enemySpawners[i].shouldSpawn = true;

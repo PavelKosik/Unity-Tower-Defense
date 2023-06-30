@@ -73,6 +73,7 @@ public class TurretAttackEnemiesScript : MonoBehaviour
                 }
             }
 
+            //handles what should happen in the first selected enemy is not alive 
             else
             {
                 for (int i = 1; i < nearEnemies.Length; i++)

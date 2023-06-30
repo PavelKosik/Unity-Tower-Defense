@@ -17,6 +17,7 @@ public class UpdateCostTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //tells to player how much the update is based on the update's type
         switch (updateType)
         {
             case "attack":

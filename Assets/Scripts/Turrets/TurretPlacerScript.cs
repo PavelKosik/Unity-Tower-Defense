@@ -42,7 +42,7 @@ public class TurretPlacerScript : MonoBehaviour
     }
 
    
-
+    //opens the turret select menu
     void OpenTurretMenu()
     {
         for (int i=0;i<turrets.Length;i++)
@@ -51,6 +51,7 @@ public class TurretPlacerScript : MonoBehaviour
         }
     }
 
+    //closes the turret select menu
     void CloseTurretMenu()
     {
         for (int i = 0; i < turrets.Length; i++)

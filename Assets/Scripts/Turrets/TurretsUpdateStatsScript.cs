@@ -36,6 +36,7 @@ public class TurretsUpdateStatsScript : MonoBehaviour, IPointerDownHandler, IPoi
 
         switch (update)
         {
+            //updates the stat if player has enough money to purchase the update
             case "attack":
 
                 if (goldManagerScript.numberOfGold >= costOfUpdate[turrets.currentNumberOfUpdatesDamage])

@@ -16,6 +16,7 @@ public class WallHealthTextMeshScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //updates the text to reflect the state of the wall
         healthTextMesh.text = (wallScript.currentHealth+"/"+wallScript.maxHealth).ToString();
     }
 }

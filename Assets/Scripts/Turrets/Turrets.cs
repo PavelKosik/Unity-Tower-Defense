@@ -3,11 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//class used to create the turrets from
 public class Turrets : MonoBehaviour
-{
-
-   
+{   
     public float range;
     public float timeBetweenAttacks;      
     private TurretAttackEnemiesScript turretAttackEnemiesScript;

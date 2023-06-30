@@ -38,11 +38,13 @@ public class SpawnButtonScript : MonoBehaviour
 
     public void Spawn()
     {
+        //only can spawn if there is not other wall being spawned at the moment
         if (spawning==false) {
-
+            //the wall can only be spawned if the player has enough gold to do so
             if (goldManagerScript.numberOfGold>= costOfTheWall) {
-
+                //enables player to cancel the wall spawn if case the doesn't want to spawn the wall anymore
                 cancelSpawnButton.gameObject.SetActive(true);
+                //removes the player gold and setups the wall to be functional
                 goldManagerScript.numberOfGold -= costOfTheWall;
                 GameObject inst = StaticClass.SpawnGameObject(objectToSpawn);
                 PlaceWall placeTurret = inst.AddComponent<PlaceWall>();
@@ -55,7 +57,7 @@ public class SpawnButtonScript : MonoBehaviour
 
                 wallImage.gameObject.SetActive(false);
             }
-
+            //if player doesn't have enough gold to buy the wall he is notified of that fact
             else
             {
                 goldManagerScript.HandleNotEnoughGold();

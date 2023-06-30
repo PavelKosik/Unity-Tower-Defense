@@ -22,6 +22,7 @@ public class StartButtonScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //handles the behaviour of the level select menu
         open = !open;
 
         if (open)
@@ -34,8 +35,6 @@ public class StartButtonScript : MonoBehaviour
         else
         {
             levelSelectMenu.SetActive(false);
-          //  startMenu.GetComponent<SpriteRenderer>().sprite = null;
-
         }
 
         yield return new WaitForEndOfFrame();

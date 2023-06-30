@@ -16,6 +16,7 @@ public class EnemyAnimationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes sure that enemy is playing proper animation based on if he is alive and attacking
         if (enemyBehavior!=null && enemyBehavior.pathFollower!=null) {
 
             anim.SetFloat("Health", enemyBehavior.health);

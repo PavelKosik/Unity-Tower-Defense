@@ -16,6 +16,7 @@ public class PauseMenuManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if pause menu is open the game is paused
         if (Input.GetKeyDown("escape"))
         {
             open = !open;

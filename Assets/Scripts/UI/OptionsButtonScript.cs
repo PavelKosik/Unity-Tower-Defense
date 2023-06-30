@@ -20,6 +20,7 @@ public class OptionsButtonScript : MonoBehaviour
 
     public IEnumerator OnInvoke()
     {
+        //closes and opens the settingsMenu based on it's previous state
         open = !open;
 
         if (open)

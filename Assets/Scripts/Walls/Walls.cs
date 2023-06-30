@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//class used to make different types of walls from
 public class Walls : MonoBehaviour
 {
     public float health;
